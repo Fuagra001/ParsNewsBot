@@ -1,7 +1,6 @@
 from openai import OpenAI
-from config import OPENAI_API_KEY
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="AI_TOKEN")
 
 def make_summary(channel_url: str, messages: list[str], period: tuple[str, str], max_chars: int = 3000) -> str:
     """
@@ -33,3 +32,4 @@ def make_summary(channel_url: str, messages: list[str], period: tuple[str, str],
     )
 
     return f"📌 Отчёт по каналу {channel_url}\nПериод сообщений: {start_date} — {end_date}\n\n{resp.choices[0].message.content}"
+

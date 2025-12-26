@@ -8,10 +8,9 @@ from bs4 import BeautifulSoup
 
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
-from config import BOT_TOKEN
 from summarizer import make_summary
 
-bot = Bot(token="7922022266:AAF_HcGye4W4taFZ2AMuekAd6jdTWNFhbmU")
+bot = Bot(token="BOT_TOKEN")
 dp = Dispatcher()
 
 CHANNELS_FILE = Path("channels.json")
@@ -172,3 +171,4 @@ async def delete_channel(callback: types.CallbackQuery):
 # ---------------- Запуск бота ----------------
 if __name__ == "__main__":
     asyncio.run(dp.start_polling(bot))
+
